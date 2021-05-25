@@ -1,0 +1,9 @@
+[[redirects]]
+from = "/"
+to = "/you.html"
+status = 200
+
+[[redirects]]
+from = "/index.html"
+to = "/you.html"
+status = 200

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1e2033;
+            color: #ddbc4e;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .pp {
+            font-size: 8rem;
+            text-transform: uppercase;
+        }
+
+        .mamuel_pp {
+            height: 9rem;
+            width: 9rem;
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            height: 4rem;
+            width: 15rem;
+            background-color: #ddbc4e;
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        .shutyourmouse {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="pp" id="pptext">You</h1>
+    <img src="./pp.png" class="mamuel_pp">
+    <div class="center">
+        <button onclick="execute(this)">PP Size Machine</button>
+    </div>
+
+    <script>
+        const audio = new Audio("./you.mp3");
+        audio.loop = true;
+
+        function execute(elm) {
+            elm.disabled = true;
+            elm.innerText = "Click here to stop";
+            document.body.style.cursor = "not-allowed";
+            document.body.classList.add("shutyourmouse");
+            audio.play().then(() => {
+                document.getElementById("pptext").innerText = "Never Gonna Give You Up";
+                alert("rip small pp");
+    
+                while(true){}
+            })
+            .catch(e => {
+                document.getElementById("pptext").innerText = "You Have Big PP";
+                alert("pog big pp");
+                while (true) { }
+            });
+        }
+    </script>
+</body>
+</html>
